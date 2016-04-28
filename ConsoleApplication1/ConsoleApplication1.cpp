@@ -22,4 +22,5 @@ void main()
 	cout << n << endl;
 
 	int k = 50;
+	int j = 20;
 }
