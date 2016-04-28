@@ -3,31 +3,21 @@
 #include <mutex>
 #include <iostream>
 #include <typeinfo>
+#include <algorithm>
+#include <functional>
+#include <vector>
 using namespace std;
 
 
-template <class Fn,class... Args>
- void func(Fn&&f, Args&&... arg)
+
+void f()
 {
-	f(arg...);
+
 }
-
-
-void f(int k)
-{
-	cout << "s:\n";
-}
-void f(double, double)
-{
-	cout << "dobule\n";
-}
-
-typedef void (*FT)(int)  ;
-
-
-
 
 void main()
 {
-
+	vector<int> vi{ 1,2,3,4,5,6,7,8,9 };
+	int n = count_if(vi.begin(), vi.end(), bind(less<int>{}, 5,std::placeholders::_1));
+	cout << n << endl;
 }
