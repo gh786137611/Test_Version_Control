@@ -21,5 +21,5 @@ void main()
 	int n = count_if(vi.begin(), vi.end(), bind(less<int>{}, 5,std::placeholders::_1));
 	cout << n << endl;
 
-
+	int k = 50;
 }
